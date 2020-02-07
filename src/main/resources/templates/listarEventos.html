@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Eventos</title>
+    <link rel="stylesheet" href="listarEventos.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <link href="https://fonts.googleapis.com/css?family=Martel+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div th:replace="header :: header"> </div>
+
+
+
+<aside className="main-container">
+    <ul>
+        <li  th:each="evento : ${eventos}" th:id="evento.id">
+            <img th:src="${evento.imagem}" />
+            <footer>
+                <strong th:text="${evento.nome}"></strong>
+                <p th:text="${evento.genero}"></p>
+            </footer>
+
+            <div type="submit" action="" className="buttons" id="teste">
+                <div id="botao">
+                    <a class="botoes" th:href="@{'/evento/' + ${evento.id}}">
+                        <span th:text="${evento.nome}"></span>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</aside>
+</body>
+</html>

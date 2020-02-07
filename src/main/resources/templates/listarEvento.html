@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/nav.css}">
+    <link href="https://fonts.googleapis.com/css?family=Martel+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/listarEvento.css}">
+
+</head>
+<body>
+
+<div th:replace="header :: header"> </div>
+
+<aside className="main-container">
+    <img th:src="${evento.imagem}" th:alt="${evento.nome}" />
+    <footer>
+        <div id="h1">
+            <h1 th:text="${evento.nome}"></h1>
+        </div>
+        <div id="Nomes">
+            <p><strong>Genero:</strong> <span th:text="${evento.genero}"></span></p>
+            <p><strong>Ínicio</strong> <span th:text="${evento.horaInicio}"></span></p>
+            <p><strong>Fim:</strong> <span th:text="${evento.horaFim}"></p>
+            <p><strong>Descrição:</strong> <span th:text="${evento.descricao}"></p>
+            <p><strong>Data:</strong> <span th:date="${evento.dataEvento}"></p>
+            <p><strong>Rua:</strong> <span th:text="${evento.rua}"></p>
+            <p><strong>Estado:</strong> <span th:text="${evento.estado}"></p>
+            <p><strong>Número:</strong> <span th:text="${evento.numero}"></p>
+            <p><strong>Bairro:</strong> <span th:text="${evento.bairro}"></p>
+        </div>
+    </footer>
+</aside>
+
+<!--<form method="post">-->
+<!--    Nome: <input type="text" value="" name="nomeParticipante"/>-->
+<!--    Bairro: <input type="text" value="" name="bairro"/>-->
+<!--    <button type="submit">cadastrar</button>-->
+<!--</form>-->
+
+<!--<h1>Participantes</h1>-->
+<!--<div>-->
+<!--    <tr th:each="participante: ${participantes}">-->
+<!--        <p>-->
+<!--            <strong>Nome:</strong> <span th:text="${participante.nomeParticipante}"></span>-->
+<!--            <strong>Bairro:</strong> <span th:text="${participante.bairro}"></span>-->
+<!--        </p>-->
+<!--    </tr>-->
+<!--</div>-->
+
+</body>
+</html>

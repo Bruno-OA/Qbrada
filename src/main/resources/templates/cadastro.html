@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/cadastroEvento.css}">
+    <title>Cadastro</title>
+</head>
+<body>
+<h1>Cadastro de Eventos</h1>
+
+<div th:each="erro : ${erros}">
+   <span th:text="${erro.field}"></span>
+    <span th:text="${erro.defaultMessage}"></span>
+</div>
+
+<form action="cadastrar" class="form" method="POST">
+
+    <label>Nome: </label>
+    <input type="text" name="nome"> <br><br>
+
+    <label>Descrição: </label>
+    <textarea name="descricao" id="" cols="30" rows="10"></textarea><br>
+
+    <label>link imagem: </label>
+    <input type="text" name="imagem"><br><br>
+
+    <label>Genero: </label>
+    <select name="genero">
+        <option value="festivalDeTalentos">Festival de Talentos</option>
+        <option value="streetDance">Street Dance</option>
+        <option value="feiraCultural">Feira Cultural</option>
+        <option value="show">Show</option>
+        <option value="batalhaDeRimas">Batalha de Rimas</option>
+        <option value="slam">Slam</option>
+        <option value="workshop">WorkShop</option>
+        <option value="palestra">Palestra</option>
+        <option value="teatro">Teatro</option>
+        <option value="competiçãoDeDanca">Competição de Dança</option>
+    </select><br>
+
+    <label>Data: </label>
+    <input type="date" name="dataEvento"> <br><br>
+
+    <label>Inicio do Evento: </label>
+    <input type="text" name="horaInicio"> <br><br>
+
+    <label>Fim do Evento : </label>
+    <input type="text" name="horaFim"> <br><br>
+
+    <label>Criador: </label>
+    <input type="text" name="criador"> <br><br>
+
+    <label>Colaboradores: </label>
+    <input type="text" name="colaboradores"> <br><br>
+
+    <label>Rua: </label>
+    <input type="text" name="rua"><br>
+
+    <label>Estado: </label>
+    <input type="text" name="estado"><br>
+
+    <label>Bairro: </label>
+    <input type="text" name="bairro"><br>
+
+    <label>Numero: </label>
+    <input type="text" name="numero"><br>
+
+    <button>Cadastrar</button>
+
+    <p th:text="${msg}"></p>
+</form>
+
+</body>
+</html>

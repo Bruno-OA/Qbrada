@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<!--
+	Introspect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+<head>
+    <title>Qbrada</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="Main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Martel+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<div th:replace="header :: header"> </div>
+
+
+
+<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+<!-- Banner -->
+<section id="banner">
+    <div class="buscar">
+        <form action="/buscar " method="post">
+            <input type="search" id="busca" name="nome" placeholder="Pesquisar evento">
+            <button type="submit">Pesquisar</button>
+        </form>
+        <p th:text="${msg}"></p>
+    </div>
+    <div class="inner">
+        <ul class="actions">
+
+
+            <h1>Eventos ativos</h1>
+            <li><a href="/eventos" class="button alt">Eventos</a></li>
+
+         <div class="venha">
+            <p> Venha participar conosco!</p>
+         </div>
+        </ul>
+
+
+
+
+    </div>
+</section>
+<aside class="Sobre">
+    <div class="tituloSobre">
+        <strong>Quem somos?</strong>
+    </div>
+
+    <div class="DescricaoSobre">
+        <p>Nós somos colaboradores de projetos sociais
+            e temos como objetivo ajudar as comunidades a ter acesso a cultura;
+            por meio de eventos realizados por empresas colaboradoras.
+        </p>
+
+    </div>
+</aside>
+
+<div class="rodape">
+
+    <img th:src="@{images/logo_omni.png}" style="
+                width: 156px;
+                height: 39px;">
+
+    <img th:src="@{images/serv.png}" style="
+                     width: 150px;
+                     height: 43px;">
+
+    <img th:src="@{images/inter.png}" style="
+                 width: 185px;
+                 height: 40px;">
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

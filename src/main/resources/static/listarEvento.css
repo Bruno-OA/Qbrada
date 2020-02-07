@@ -1,0 +1,83 @@
+body{
+    background-color:black;
+}
+
+h1{
+    color:white
+}
+
+
+h2{
+    color:white;
+    font-size:15px;
+}
+
+.individual{
+    display: block;
+    color:
+    white;
+}
+
+.descicao{
+background-color: *Cor de Escolha*
+Margin: 15px;
+Padding: 10px;
+Font-size: 15px;
+height: 150px;
+width: 600px;
+display: block ruby;
+block-size: revert
+}
+
+body{
+    background-color: black;
+}
+h1{
+        color: white;
+        font-size: 20pt;
+}
+h2{
+    color: white;
+}
+#h1{
+color: white;
+    margin-left 40px: ;
+    font-size: 11pt;
+    width: 262px;
+    margin-left: 466px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+aside{
+    display: flex;
+    align-items: center;
+}
+
+aside img{
+    max-width: 42%;
+}
+footer {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+       width: 267px;
+}
+
+#Nomes{
+    height: 417px;
+    background-color: #000;
+    width: 450px;
+    margin-left: 469px;
+    border-radius: 2%;
+    color: white;
+    text-align: center;
+}
+
+body{
+    background: black;
+}
